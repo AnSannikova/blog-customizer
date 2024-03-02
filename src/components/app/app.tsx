@@ -1,5 +1,4 @@
 import { CSSProperties, useState, FormEvent } from 'react';
-import clsx from 'clsx';
 
 import { Article } from '../article/Article';
 import { ArticleParamsForm } from '../article-params-form/ArticleParamsForm';
@@ -62,8 +61,8 @@ export const App = () => {
 	};
 
 	return (
-		<div
-			className={clsx(styles.main)}
+		<main
+			className={styles.main}
 			style={
 				{
 					'--font-family': appState.fontFamilyOption.value,
@@ -75,6 +74,6 @@ export const App = () => {
 			}>
 			<ArticleParamsForm {...props} />
 			<Article />
-		</div>
+		</main>
 	);
 };
